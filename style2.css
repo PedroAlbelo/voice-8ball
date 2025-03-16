@@ -24,7 +24,7 @@ select {
 }
 
 select:hover {
-    border-color: #7b45a0; /* Muda a cor da borda ao passar o mouse */
+    border-color: #7b45a0; 
 }
 
 
@@ -38,7 +38,7 @@ select:hover {
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza os itens horizontalmente */
+    align-items: center; 
 }
 
 .bola8 {
@@ -53,8 +53,8 @@ select:hover {
     position: relative;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
     animation: gradientBola 5s ease infinite;
-    margin-bottom: 122px; /* Espaçamento abaixo da bola */
-    overflow: hidden; /* Garante que o texto não saia do círculo */
+    margin-bottom: 122px; 
+    overflow: hidden; 
 }
 
 @keyframes gradientBola {
@@ -78,17 +78,17 @@ select:hover {
 
 .resposta {
     color: white;
-    font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
+    font-size: 18px; 
     text-align: center;
     z-index: 1;
     opacity: 1;
     transition: opacity 0.5s ease;
-    padding: 10px; /* Adiciona espaço ao redor do texto */
-    box-sizing: border-box; /* Inclui o padding no cálculo da largura */
-    max-width: 90%; /* Limita a largura do texto */
-    white-space: normal; /* Permite que o texto quebre em várias linhas */
-    overflow: hidden; /* Oculta o texto que não cabe */
-    text-overflow: ellipsis; /* Adiciona reticências se o texto for muito longo */
+    padding: 10px; 
+    box-sizing: border-box; 
+    max-width: 90%; 
+    white-space: normal; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
     transition: opacity 0.5s ease, transform 0.5s ease;
 
 }
@@ -138,7 +138,7 @@ button:active {
 }
 
 .language-container {
-    position: absolute; /* Posiciona a caixa de seleção no canto superior esquerdo */
+    position: absolute; 
     top: 20px;
     left: 20px;
 }

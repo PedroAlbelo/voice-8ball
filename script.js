@@ -11,7 +11,6 @@ const texts = {
     }
 };
 
-// Atualiza os textos com base no idioma selecionado
 document.getElementById("languageSelect").addEventListener("change", function() {
     const lang = this.value === "pt-BR" ? "pt" : "en";
     updateTexts(lang);
@@ -29,15 +28,14 @@ languageSelect.addEventListener("change", function() {
 });
 
 
-// Função para atualizar os textos na interface
 function updateTexts(lang) {
     const output = document.getElementById("output");
     const perguntaBox = document.getElementById("perguntaBox");
-    const questionButton = document.getElementById("askButton"); // Corrigido para usar o ID correto
+    const questionButton = document.getElementById("askButton"); 
 
     output.innerText = texts[lang].output;
     perguntaBox.innerText = texts[lang].perguntaBox;
-    questionButton.innerText = texts[lang].button; // Atualiza o texto do botão
+    questionButton.innerText = texts[lang].button; 
 }
 
 function startListening() {
@@ -48,7 +46,7 @@ function startListening() {
     
     const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
     const languageSelect = document.getElementById("languageSelect");
-    recognition.lang = languageSelect.value; // Usa o idioma selecionado
+    recognition.lang = languageSelect.value;
     recognition.interimResults = false;
     recognition.continuous = false;
     
@@ -60,9 +58,9 @@ function startListening() {
         const fala = event.results[0][0].transcript;
         console.log("Pergunta reconhecida:", fala);
         perguntaBox.innerText = fala;
-        const resposta = gerarResposta(languageSelect.value); // Passa o idioma para gerar a resposta
+        const resposta = gerarResposta(languageSelect.value); 
         output.innerText = resposta;
-        falar(resposta, languageSelect.value); // Passa o idioma para a função de fala
+        falar(resposta, languageSelect.value); 
     };
     
     recognition.onerror = function(event) {
@@ -90,7 +88,7 @@ function gerarResposta(lang) {
 function falar(texto, lang) {
     const synth = window.speechSynthesis;
     const utterance = new SpeechSynthesisUtterance(texto);
-    utterance.lang = lang; // Usa o idioma selecionado
+    utterance.lang = lang; 
     synth.speak(utterance);
 }
 
