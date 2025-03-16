@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <script src="script.js" defer></script>
+    <title>8Ball de Voz</title>
+</head>
+<body>
+    <div class="container">
+        <div class="language-container">
+            <select id="languageSelect" onchange="updateLanguage()">
+                <option value="pt-BR">Português</option>
+                <option value="en-US">English</option>
+            </select>
+        </div>
+        <h1 id="title">My 8 Ball</h1>
+        <div class="bola8" id="bola8">
+            <div class="resposta" id="output">Pergunte algo...</div>
+        </div>
+        <button onclick="startListening()" id="askButton">Faça sua pergunta</button>
+        <div class="pergunta-box" id="perguntaBox">Sua pergunta aparecerá aqui...</div>
+    </div>
+</body>
+</html>
